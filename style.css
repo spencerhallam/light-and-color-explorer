@@ -1,0 +1,36 @@
+#scratch{
+    height: 25px;
+    width: 50px;
+    border: 1px solid gray;
+    margin-left: 10px;
+  }
+  #hsl-values{
+    display:flex;
+    justify-content: space-around;
+    min-height: 50px;
+  }
+  #hsl-values div{
+    display: flex;
+    flex-direction: column;
+    font-family: helvetica, arial, sans-serif;
+    font-size: 12px;
+  }
+  #hsl-values div div{
+    padding-right: 20px;
+  }
+  #all-sliders{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  #swatches{
+    display: flex;
+  }
+  .slide-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .slide-container label{
+    font-family: helvetica, arial, sans-serif;
+    font-size: 12px;
+  }

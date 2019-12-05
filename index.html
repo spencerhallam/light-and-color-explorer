@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<link rel = "stylesheet" type="text/css" href="style.css" />
+	
+
+</head>
+<body>
+<div id="hsl-values">
+    <div>Highlight: <div id="hslOneVal"></div></div>
+    <div>Light Side:<div id="hslTwoVal"></div></div>
+    <div>MidTone:<div id="hslThreeVal"></div></div>
+    <div>Dark MidTone:<div id="hslFourVal"></div></div>
+    <div>Darkest MidTone: <div id="hslFiveVal"></div></div>
+    <div>Dark Side:<div id="hslSixVal"></div></div>
+      <div>Ground:<div id="hslSevenVal"></div></div>
+    <div>Shadow:<div id="hslEightVal"></div></div>
+    <div>Background:<div id="hslNineVal"></div></div>
+  
+  </div>
+  
+  
+  <div id="swatches">
+  <svg height="30" width="600">
+  <polygon id="polyOne" points="0,0 100,0 100,25 0,25" />
+  <polygon id="polyTwo" points="100,0 200,0 200,25 100,25" />
+  <polygon id="polyThree" points="200,0 300,0 300,25 200,25" /> 
+  <polygon id="polyFour" points="300,0 400,0 400,25 300,25" />
+  <polygon id="polyFive" points="400,0 500,0 500,25 400,25" />
+  <polygon id="polySix" points="500,0 600,0 600,25 500,25" />   
+  </svg>
+  <div id="scratch" style="background-color: hsl(0, 50%, 50%)"></div>
+  </div>  
+  <div id="all-sliders">
+  <div class="slide-container">
+    
+    <label>HUE:</label>
+    <input type="range" min="39" max="399" value="360" class="colorInput" name="cube-hue" id="rangeOne">
+  </div>  
+  <div class="slide-container">
+    <label>SATURATION:</label>
+    <input type="range" min="0" max="100" name="saturation" value="100" class="colorInput" id="rangeTwo">
+  </div>
+  <div class="slide-container">
+    <label>VALUE:</label>
+    <input type="range" min="0" max="100" name="value" value="75" class="colorInput" id="rangeThree">
+  </div>
+  <div class="slide-container">
+  <label>Light Temp (B — Y):</label>
+  
+  <input type="range" min="0" max="255" name="value" value="127.5" class="colorInput" id="tempPicker">
+  </div> 
+  <div class="slide-container">  
+  <label>Ground Hue:</label>
+  <input type="range" min="24" max="384" name="value" value="360" class="colorInput" id="gdHueSel">
+  </div>
+  <div class="slide-container">  
+  <label>Ground Value:</label>
+  <input type="range" min="0" max="100" name="value" value="50" class="colorInput" id="gdValSel">
+  </div>   
+  <div class="slide-container">  
+  <label>Ground Sat:</label>
+  <input type="range" min="0" max="100" name="value" value="50" class="colorInput" id="gdSatSel">
+  </div>     
+    
+  </div>
+  
+  
+  <svg id="cubeSpace" height="500" width="1200">
+      <defs>
+      <linearGradient id="grad1" x1="60%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%" id="gradA" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+        <stop offset="100%" id="gradB" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+      </linearGradient>
+    </defs>
+      
+      <polygon id="bkgrd" points="0,0 1200,0 1200,220 0,220  " />
+    <polygon id="ground" points="0,220 1200,220 1200,600 0,600" />
+      
+      <polygon id="shadow" points="450,320 550,320 700,350 550,410 450,412 300,352"  />
+      
+      
+    <polygon id="ltside" points="300,190 450,150 600,190 450,230" />
+      
+    <polygon id="midtone" points="300,190 450,230 450,410 300,350 "  />
+      
+      <polygon id="darkside" points="450,230 600,190 600,350 450,410 " fill="url(#grad1)"  />
+      
+      <polygon id="dkmidtone" points="451,229 450,233 600,192 599,189 " />
+      
+      <polygon id="dkstmidtone" points="448,229 451,233 451,410 448,410" style="fill: yellow;" />  
+      <polygon id="hilite" points="300,191 303,189 453,230 450,233 "  />
+  </svg>
+  <script src="functions.js"></script>
+</body>
+</html>
