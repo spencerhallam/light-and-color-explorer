@@ -7,33 +7,51 @@ const grndHue = document.getElementById("gdHueSel");
 const grndSat = document.getElementById("gdSatSel");
 const grndVal = document.getElementById("gdValSel");
 
-const initOne = "hsl(360, 99%, 84%)";
-const initTwo = "hsl(360, 99%, 70%)";
-const initThree = "hsl(360, 99%, 56%)";
+const initOne = "hsl(360, 99%, 75%)";
+const initTwo = "hsl(360, 99%, 64%)";
+const initThree = "hsl(360, 99%, 53%)";
 const initFour = "hsl(360, 99%, 42%)";
-const initFive = "hsl(360, 99%, 28%)";
-const initSix = "hsl(360, 99%, 14%)";
-const initSeven = "hsl(360, 5%, 95%)";
+const initFive = "hsl(360, 99%, 32%)";
+const initSix = "hsl(360, 99%, 21%)";
+const initSeven = "hsl(384, 21%, 54%)";
 const initEight = "hsl(360, 5%, 36%)";
-const initNine = "hsl(360, 5%, 14%)";
+const initNine = "hsl(384, 21%, 18%)";
+const initRef = "hsl(383, 19%, 26%)";
+
+// Highlight:
+// hsl(360, 99%, 75%)
+// Light Side:
+// hsl(360, 99%, 64%)
+// MidTone:
+// hsl(360, 99%, 53%)
+// Dark MidTone:
+// hsl(360, 99%, 42%)
+// Darkest MidTone:
+// hsl(360, 99%, 32%)
+// Dark Side:
+// hsl(360, 99%, 21%)
+// Ground:
+// hsl(384, 21%, 54%)
+// Shadow:
+// hsl(384, 21%, 18%)
+// Background:
+// hsl(384, 21%, 18%)
 
 document.getElementById('hilite').style.fill = initOne;
   ltside.style.fill = initTwo;
   midtone.style.fill = initThree;
-  gradA.style.stopColor = initSix;
+  gradA.style.stopColor = initRef;
   gradB.style.stopColor = initSix;
-  dkmidtone.style.fill = initFive;
-  dkstmidtone.style.fill = initSix;
+  dkmidtone.style.fill = initFour;
+  dkstmidtone.style.fill = initFive;
   ground.style.fill = initSeven;
-  shadow.style.fill = initEight;
+  shadow.style.fill = initNine;
   bkgrd.style.fill = initNine;
 
 
 for (var i = 0; i < colorRangeInput.length; i++) {
   colorRangeInput[i].addEventListener('input', setColors);
 }
-
-//hueStart, sliderhue, slidersat, sliderval, tempslidervalue,
 
 function setColors(){
   const hueStart = 39;//60
@@ -238,7 +256,6 @@ function setColors(){
   ground.style.fill = hslSeven;
   shadow.style.fill = hslEight;
   bkgrd.style.fill = bkgdLight;
-  
   
 }
 

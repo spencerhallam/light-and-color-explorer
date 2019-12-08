@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
 	<link rel = "stylesheet" type="text/css" href="style.css" />
-	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 
 </head>
 <body>
@@ -13,7 +13,7 @@
     <div>Dark MidTone:<div id="hslFourVal"></div></div>
     <div>Darkest MidTone: <div id="hslFiveVal"></div></div>
     <div>Dark Side:<div id="hslSixVal"></div></div>
-      <div>Ground:<div id="hslSevenVal"></div></div>
+    <div>Ground:<div id="hslSevenVal"></div></div>
     <div>Shadow:<div id="hslEightVal"></div></div>
     <div>Background:<div id="hslNineVal"></div></div>
   
@@ -52,16 +52,17 @@
   </div> 
   <div class="slide-container">  
   <label>Ground Hue:</label>
-  <input type="range" min="24" max="384" name="value" value="360" class="colorInput" id="gdHueSel">
+  <input type="range" min="24" max="384" name="value" value="384" class="colorInput" id="gdHueSel">
+  </div>
+  <div class="slide-container">  
+    <label>Ground Sat:</label>
+    <input type="range" min="0" max="100" name="value" value="21" class="colorInput" id="gdSatSel">
   </div>
   <div class="slide-container">  
   <label>Ground Value:</label>
-  <input type="range" min="0" max="100" name="value" value="50" class="colorInput" id="gdValSel">
+  <input type="range" min="0" max="100" name="value" value="54" class="colorInput" id="gdValSel">
   </div>   
-  <div class="slide-container">  
-  <label>Ground Sat:</label>
-  <input type="range" min="0" max="100" name="value" value="50" class="colorInput" id="gdSatSel">
-  </div>     
+     
     
   </div>
   
@@ -91,6 +92,7 @@
       <polygon id="dkstmidtone" points="448,229 451,233 451,410 448,410" style="fill: yellow;" />  
       <polygon id="hilite" points="300,191 303,189 453,230 450,233 "  />
   </svg>
-  <script src="functions.js"></script>
+  
+  <script src="functions.js"></script> 
 </body>
 </html>
